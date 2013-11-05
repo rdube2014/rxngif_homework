@@ -23,3 +23,4 @@ pictures.each do |pic|
 end
 
 puts "There are now #{Picture.count} pictures in the database."
+
