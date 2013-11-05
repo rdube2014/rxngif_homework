@@ -9,10 +9,13 @@ class PicturesController < ApplicationController
   end
 
   def create
-  	#@picture_info = params[:new_picture_form])
+  	
   end
 
   def edit
+  	@picture = Picture.ind(params[:id])
+  
+  def update
+  	@picture = Picture.find(params[:id])
   end
-
 end

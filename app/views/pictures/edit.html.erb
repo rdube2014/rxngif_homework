@@ -1,15 +1,20 @@
 <h1>Edit Picture # <%= @picture.id %></h1>
 
-<form action="http://localhost:3000/update_picture/1">
+<form action="http://localhost:3000/update_picture/<%= @picture.id %>">
   <div>
     <label for="the_caption">Caption:</label>
-    <input id="the_caption" type="text" name="caption" value= "HTML5 Logo">
+    <input id="the_caption" type="text" name="caption" value= "<%= @picture.caption %>">
   </div>
   <div>
     <label for="image_url">Image URL:</label>
-    <input id="image_url" type="text" name="source" value = "http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+    <input id="image_url" type="text" name="source" value = "<%= @picture.source %>">
   </div>
   <div>
-    <input type="submit" value="Create Picture">
+    <input type="submit" name="source" value= "Edit Picture">
   </div>
 </form>
+
+<img src="<%= @picture.source %>">
+
+
+<!-- #Problem - Cant get the edited input to update on the update page.  How to pull that new value through? Something to d owith the controller...-->  
