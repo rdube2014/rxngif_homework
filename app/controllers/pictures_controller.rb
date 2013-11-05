@@ -12,4 +12,7 @@ class PicturesController < ApplicationController
   	#@picture_info = params[:new_picture_form])
   end
 
+  def edit
+  end
+
 end

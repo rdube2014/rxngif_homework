@@ -1,13 +1,13 @@
 <h1>Edit Picture # <%= @picture.id %></h1>
 
-<form action="http://localhost:3000/update_picture/:id">
+<form action="http://localhost:3000/update_picture/1">
   <div>
     <label for="the_caption">Caption:</label>
-    <input id="the_caption" type="text" name="caption" value= " ">
+    <input id="the_caption" type="text" name="caption" value= "HTML5 Logo">
   </div>
   <div>
     <label for="image_url">Image URL:</label>
-    <input id="image_url" type="text" name="source" value = " ">
+    <input id="image_url" type="text" name="source" value = "http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
   </div>
   <div>
     <input type="submit" value="Create Picture">
