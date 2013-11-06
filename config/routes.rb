@@ -14,3 +14,4 @@ Rxngif::Application.routes.draw do
   get("/update_picture/:id", { :controller => "pictures", :action => "update" })
 
 end
+

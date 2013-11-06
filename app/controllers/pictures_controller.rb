@@ -9,12 +9,16 @@ class PicturesController < ApplicationController
   end
 
   def create
-  	
+  	@picture = Picture.new
+    @picture.caption = params[:caption]
+    @picture.source = params[:source]
+    @picture.save
   end
 
   def edit
   	@picture = Picture.ind(params[:id])
-  
+  end
+
   def update
   	@picture = Picture.find(params[:id])
   end
