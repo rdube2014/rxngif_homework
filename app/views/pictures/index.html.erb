@@ -4,6 +4,7 @@
 <% @list_of_pictures.each do |pic| %>
 	<li>
 		<img width = "200" src="<%= pic.source %>">
-		<p><%= pic.caption %> </p></li>
+		<p><%= pic.caption %> </p>
+		<p>Picture ID #<%= pic.id %></p></li>
 	<% end %>
 </ul>
