@@ -1,10 +1,19 @@
 <h1>List of Pictures</h1>
 
+<%= link_to "Add a new picture", new_picture_url, :method => "get" %>
+
 <ul>
 <% @list_of_pictures.each do |pic| %>
 	<li>
-		<img width = "200" src="<%= pic.source %>">
+		<div>
+			<img width = "200" src="<%= pic.source %>">
+		</div>
 		<p><%= pic.caption %> </p>
-		<p>Picture ID #<%= pic.id %></p></li>
+		<%= link_to "Show", picture_url(pic.id), :method => "get" %>
+		<%= link_to "Edit", picture_url(pic.id), :method => "get" %>
+		<%= link_to "Destroy", picture_url(pic.id), :method => "delete" %>
+
+		<p>Picture ID #<%= pic.id %></p>
+	</li>
 	<% end %>
 </ul>
